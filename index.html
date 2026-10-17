@@ -373,6 +373,14 @@ button, a, input, select, textarea { touch-action:manipulation; }
 @media(max-width:700px){.club-showcase-inner{width:calc(100% - 28px)}.club-showcase-head{align-items:start;flex-direction:column;gap:16px}.club-showcase-head>p{max-width:420px}.club-carousel{padding:7px;border-radius:17px}.club-slide-stage{aspect-ratio:4/3;min-height:220px}.club-carousel-bottom{padding:16px 7px 12px;gap:10px}.club-carousel-controls{gap:6px}.club-arrow{width:37px;height:37px}.club-slide-count{margin-right:3px;font-size:9px}.club-slide-caption{gap:6px}.club-slide-kicker{font-size:8px}.club-progress{padding-inline:7px}.club-slide-media{object-position:center}}
 @media(prefers-reduced-motion:reduce){.club-slide-media,.club-arrow,.club-dot{transition:none!important}}
 
+
+/* Client-provided Breakpoint logo in the hero brand lockup */
+.hero-brandname{gap:12px}
+.hero-client-logo{width:clamp(48px,6vw,72px);height:clamp(48px,6vw,72px);object-fit:contain;flex:0 0 auto;border-radius:10px;filter:drop-shadow(0 5px 15px #0006)}
+.hero-brand-label{display:inline-block}
+@media(max-width:800px){.hero-client-logo{width:clamp(44px,12vw,62px);height:clamp(44px,12vw,62px);border-radius:8px}.hero-brandname{gap:10px}}
+@media(max-width:360px){.hero-client-logo{width:40px;height:40px}.hero-brandname{gap:8px}}
+
 </style>
 </head>
 <body>
@@ -382,7 +390,7 @@ button, a, input, select, textarea { touch-action:manipulation; }
 </header>
 <main id="top">
 <section class="wrap hero"><video class="hero-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260803_192301_9231ed6b-c55c-4a48-909c-4ebe11cf2e11.mp4" type="video/mp4"></video>
-<div class="copy"><div class="hero-brandname" aria-label="BREAKPOINT brand">BREAKPOINT<span class="hero-brand-rule"></span></div><div class="eyebrow"><span class="dot"></span> YOUR NEXT GAME STARTS HERE</div>
+<div class="copy"><div class="hero-brandname" aria-label="BREAKPOINT brand"><img class="hero-client-logo" src="./f0c7001f-fccb-4912-8bb5-087b1c6a5c82.jpeg" alt="Breakpoint Billiards Club logo" decoding="async"><span class="hero-brand-label">BREAKPOINT</span><span class="hero-brand-rule"></span></div><div class="eyebrow"><span class="dot"></span> YOUR NEXT GAME STARTS HERE</div>
 <h1 class="hero-brand-title">BREAK<br><span class="outline">POINT.</span></h1>
 <p>Good games. Great company. Your table, your time. Choose a session and reserve your spot in just a few steps.</p>
 <div class="herobtns"><a class="btn" href="#booking">RESERVE A TABLE <span>↗</span></a><a class="btn secondary" href="#board">EXPLORE THE TABLE ↓</a></div>
