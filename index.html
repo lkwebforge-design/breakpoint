@@ -101,7 +101,34 @@ $('bookingForm').addEventListener('submit',async e=>{
     const status=$('sumDate').closest('.summarybox');
     const statusValue=status?.querySelectorAll('.sumrow strong')?.[4];
     if(statusValue)statusValue.textContent='Pending owner confirmation';
-    toast('Booking request saved'+(ref?' · Reference: '+ref:'')+'. Pending owner confirmation.');
+    // Create a customer-triggered WhatsApp notification after the booking is saved.
+    let whatsappButton=$('whatsappNotify');
+    if(!whatsappButton){
+      whatsappButton=document.createElement('a');
+      whatsappButton.id='whatsappNotify';
+      whatsappButton.className='btn fullbtn';
+      whatsappButton.style.cssText='background:#25D366;color:#07140b;text-align:center;text-decoration:none;margin-top:12px';
+      whatsappButton.target='_blank';
+      whatsappButton.rel='noopener noreferrer';
+      whatsappButton.textContent='NOTIFY BREAKPOINT ON WHATSAPP ↗';
+      submitButton.insertAdjacentElement('afterend',whatsappButton);
+    }
+    const message=[
+      'Hi BREAKPOINT Billiards! I have submitted a booking request.',
+      '',
+      'Booking reference: '+(ref||'Not provided'),
+      'Table: Billiard Board 01',
+      'Date: '+readableDate(booking.date),
+      'Start time: '+readableTime(booking.time),
+      'Duration: '+booking.duration+' '+(booking.duration==='1'?'hour':'hours'),
+      'Customer name: '+booking.name,
+      'Customer phone: '+booking.phone,
+      booking.notes ? 'Note: '+booking.notes : '',
+      '',
+      'Please review and confirm my booking request. Thank you!'
+    ].filter(Boolean).join('\\n');
+    whatsappButton.href='https://wa.me/94741832377?text='+encodeURIComponent(message);
+    toast('Booking request saved'+(ref?' · Reference: '+ref:'')+'. Tap the WhatsApp button to notify the owner.');
     submitButton.textContent='REQUEST RECEIVED ✓';
     console.info('BREAKPOINT booking saved:',{reference:ref,status:result.booking?.status});
   }catch(error){
