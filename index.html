@@ -278,6 +278,56 @@ hr, .divider { border-color: rgba(199,166,106,.2) !important; }
   }
 }
 
+
+/* === Cross-device layout hardening === */
+html { max-width:100%; overflow-x:clip; }
+body { min-width:0; max-width:100%; overflow-x:clip; }
+main, section, header, footer, .wrap, .booklayout, .bookingbox, .summarybox,
+.boardcard, .boardvisual, .boardinfo, .formgrid, .field {
+  min-width:0;
+}
+img, video, canvas, iframe, svg { max-width:100%; }
+button, a, input, select, textarea { touch-action:manipulation; }
+.bookingbox .field input,
+.bookingbox .field select,
+.bookingbox .field input[type="date"] {
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  box-sizing:border-box;
+}
+.bookingbox .slot {
+  min-height:44px;
+  max-width:100%;
+  white-space:normal;
+}
+.bookingbox .fullbtn,
+.boardinfo .btn,
+.navcta {
+  max-width:100%;
+  white-space:normal;
+  text-align:center;
+}
+.boardinfo, .bookingbox, .summarybox { overflow-wrap:anywhere; }
+@media (max-width: 360px) {
+  .wrap { width:calc(100% - 24px) !important; }
+  .bookingbox, .summarybox { padding:15px !important; }
+  .bookingbox .field input[type="date"] { font-size:12px; padding-inline:5px !important; }
+  .bookingbox .slots { gap:6px !important; }
+  .bookingbox .slot { padding:9px 8px !important; font-size:10px; }
+  .boardvisual { padding:14px !important; }
+  .boardinfo { padding:20px !important; }
+  .navcta { padding:10px 9px; font-size:8px; }
+}
+@media (max-width: 800px) and (orientation: landscape) {
+  .hero { min-height:0; padding-top:34px; padding-bottom:30px; }
+  .scene { min-height:230px; }
+  .section { padding-top:52px; padding-bottom:52px; }
+}
+@media (hover:none) {
+  .btn:hover, .navcta:hover, .step:hover { transform:none; }
+}
+
 </style>
 </head>
 <body>
