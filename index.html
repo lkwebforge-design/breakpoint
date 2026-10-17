@@ -126,7 +126,7 @@ $('bookingForm').addEventListener('submit',async e=>{
       booking.notes ? 'Note: '+booking.notes : '',
       '',
       'Please review and confirm my booking request. Thank you!'
-    ].filter(Boolean).join('\\n');
+    ].filter(Boolean).join('\n');
     whatsappButton.href='https://wa.me/94741832377?text='+encodeURIComponent(message);
     toast('Booking request saved'+(ref?' · Reference: '+ref:'')+'. Tap the WhatsApp button to notify the owner.');
     submitButton.textContent='REQUEST RECEIVED ✓';
