@@ -381,6 +381,13 @@ button, a, input, select, textarea { touch-action:manipulation; }
 @media(max-width:800px){.hero-client-logo{width:clamp(44px,12vw,62px);height:clamp(44px,12vw,62px);border-radius:8px}.hero-brandname{gap:10px}}
 @media(max-width:360px){.hero-client-logo{width:40px;height:40px}.hero-brandname{gap:8px}}
 
+
+/* Large client logo blended into the hero background */
+.hero-logo-background{position:absolute;z-index:-1;left:50%;top:50%;width:min(70vw,780px);height:min(70vw,780px);object-fit:contain;transform:translate(-50%,-50%);opacity:.20;filter:drop-shadow(0 12px 50px #0009);pointer-events:none;mix-blend-mode:screen}
+.hero-video{z-index:-3}
+.hero:before{z-index:-2;background:linear-gradient(90deg,rgba(18,18,18,.88) 0%,rgba(18,18,18,.70) 49%,rgba(18,18,18,.50) 100%),linear-gradient(0deg,rgba(18,18,18,.76),rgba(18,18,18,.22) 65%)}
+@media(max-width:800px){.hero-logo-background{width:min(105vw,620px);height:min(105vw,620px);left:56%;top:48%;opacity:.17}.hero:before{background:linear-gradient(90deg,rgba(18,18,18,.82),rgba(18,18,18,.55)),linear-gradient(0deg,rgba(18,18,18,.76),rgba(18,18,18,.2) 65%)}}
+
 </style>
 </head>
 <body>
@@ -389,7 +396,7 @@ button, a, input, select, textarea { touch-action:manipulation; }
 <nav class="navright"><a href="#board">THE TABLE</a><a href="#how">HOW IT WORKS</a><a class="navcta" href="#booking">BOOK A SESSION ↗</a></nav>
 </header>
 <main id="top">
-<section class="wrap hero"><video class="hero-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260803_192301_9231ed6b-c55c-4a48-909c-4ebe11cf2e11.mp4" type="video/mp4"></video>
+<section class="wrap hero"><img class="hero-logo-background" src="./f0c7001f-fccb-4912-8bb5-087b1c6a5c82.jpeg" alt="" aria-hidden="true" decoding="async"><video class="hero-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260803_192301_9231ed6b-c55c-4a48-909c-4ebe11cf2e11.mp4" type="video/mp4"></video>
 <div class="copy"><div class="hero-brandname" aria-label="BREAKPOINT brand"><img class="hero-client-logo" src="./f0c7001f-fccb-4912-8bb5-087b1c6a5c82.jpeg" alt="Breakpoint Billiards Club logo" decoding="async"><span class="hero-brand-label">BREAKPOINT</span><span class="hero-brand-rule"></span></div><div class="eyebrow"><span class="dot"></span> YOUR NEXT GAME STARTS HERE</div>
 <h1 class="hero-brand-title">BREAK<br><span class="outline">POINT.</span></h1>
 <p>Good games. Great company. Your table, your time. Choose a session and reserve your spot in just a few steps.</p>
