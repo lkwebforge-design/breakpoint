@@ -159,6 +159,98 @@ hr, .divider { border-color: rgba(199,166,106,.2) !important; }
   }
 }
 
+
+/* === CARD REFINEMENT: Board 01 showcase + Reserve Board 01 booking form === */
+.boardcard {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr) !important;
+  background: linear-gradient(135deg, rgba(18,61,50,.96), rgba(10,37,31,.98)) !important;
+  border: 1px solid rgba(199,166,106,.34) !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  box-shadow: 0 28px 75px rgba(0,0,0,.3), inset 0 1px 0 rgba(244,240,229,.05) !important;
+}
+.boardvisual {
+  min-width: 0;
+  min-height: 340px !important;
+  background: radial-gradient(ellipse at 50% 46%, rgba(29,89,72,.72), transparent 62%), linear-gradient(145deg,#0A251F,#102E26) !important;
+  padding: clamp(22px,4vw,42px) !important;
+}
+.boardvisual .table { width: min(100%, 460px); }
+.boardinfo {
+  min-width: 0;
+  padding: clamp(26px,4vw,46px) !important;
+  background: linear-gradient(155deg, rgba(29,89,72,.44), rgba(10,37,31,.96)) !important;
+  border-left: 1px solid rgba(199,166,106,.16);
+}
+.boardinfo .status {
+  background: rgba(199,166,106,.12) !important;
+  border: 1px solid rgba(199,166,106,.45) !important;
+  color: #F4F0E5 !important;
+}
+.boardinfo .status:before { background:#83C9A8 !important; box-shadow:0 0 12px rgba(131,201,168,.65); }
+.boardinfo h3 { color:#F4F0E5 !important; font-size:clamp(36px,4.2vw,52px) !important; line-height:.98 !important; overflow-wrap:anywhere; }
+.boardinfo p { color:#C5D5CC !important; font-size:13px !important; line-height:1.8 !important; }
+.featurelist { gap:10px 16px !important; color:#D5E1D9 !important; }
+.featurelist span:before { color:#C7A66A !important; }
+.boardinfo .btn { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:48px; padding:0 20px; border-radius:12px; text-decoration:none; }
+
+#booking { background:linear-gradient(180deg, transparent 0%, rgba(10,37,31,.78) 12%, rgba(10,37,31,.96) 50%, rgba(10,37,31,.7) 88%, transparent 100%) !important; }
+.booklayout { grid-template-columns:minmax(0,1.15fr) minmax(280px,.75fr) !important; gap:22px !important; }
+.bookingbox, .summarybox {
+  min-width:0;
+  border:1px solid rgba(199,166,106,.28) !important;
+  border-radius:22px !important;
+  padding:clamp(20px,3vw,32px) !important;
+  box-shadow:0 24px 65px rgba(0,0,0,.24) !important;
+}
+.bookingbox { background:linear-gradient(145deg,rgba(18,61,50,.94),rgba(10,37,31,.98)) !important; }
+.bookingbox h3, .summarybox h3 { color:#F4F0E5 !important; font-size:clamp(25px,3vw,31px) !important; line-height:1.12; }
+.bookingbox .sub { color:#B7C8BE !important; margin-bottom:24px; }
+.bookingbox .field label { color:#E4D1A5 !important; }
+.bookingbox .field input, .bookingbox .field select, .bookingbox .slot {
+  min-width:0;
+  border:1px solid rgba(199,166,106,.27) !important;
+  background:rgba(6,25,21,.72) !important;
+  color:#F4F0E5 !important;
+  border-radius:11px !important;
+}
+.bookingbox .field input:focus, .bookingbox .field select:focus, .bookingbox .slot:focus-visible {
+  outline:2px solid rgba(199,166,106,.65);
+  outline-offset:2px;
+}
+.bookingbox .slot { padding:11px 13px !important; }
+.bookingbox .slot.active, .bookingbox .slot:hover {
+  background:rgba(199,166,106,.2) !important;
+  border-color:#C7A66A !important;
+  color:#FFF4D6 !important;
+}
+.bookingbox .slot.taken { opacity:.42; }
+.bookingbox .fieldnote, .bookingbox .policy { color:#B7C8BE !important; line-height:1.7; }
+.bookingbox .fullbtn { min-height:52px; border-radius:12px !important; letter-spacing:.04em; }
+.summarybox { background:linear-gradient(150deg,rgba(18,61,50,.9),rgba(10,37,31,.98)) !important; }
+.summarybox .eyebrow { color:#C7A66A !important; }
+.summarybox .sumrow { border-color:rgba(199,166,106,.2) !important; }
+.summarybox .sumrow span { color:#B7C8BE !important; }
+.summarybox .sumrow strong { color:#F4F0E5 !important; }
+.summarybox .summark { border:1px solid rgba(199,166,106,.25); border-radius:16px; overflow:hidden; }
+@media (max-width: 800px) {
+  .boardcard { grid-template-columns:minmax(0,1fr) !important; }
+  .boardvisual { min-height:260px !important; }
+  .boardinfo { border-left:0; border-top:1px solid rgba(199,166,106,.16); padding:26px !important; }
+  .booklayout { grid-template-columns:minmax(0,1fr) !important; }
+  .summarybox { position:static !important; }
+}
+@media (max-width: 480px) {
+  .boardvisual { min-height:220px !important; padding:18px !important; }
+  .boardinfo h3 { font-size:38px !important; }
+  .bookingbox, .summarybox { padding:19px !important; border-radius:17px !important; }
+  .formgrid { grid-template-columns:minmax(0,1fr) !important; }
+  .field.full { grid-column:auto !important; }
+  .bookingbox .slots { gap:7px !important; }
+  .bookingbox .slot { padding:10px 11px !important; }
+}
+
 </style>
 </head>
 <body>
