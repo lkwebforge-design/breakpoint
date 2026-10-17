@@ -336,6 +336,10 @@ button, a, input, select, textarea { touch-action:manipulation; }
 @media(max-width:800px){.hero-brandname{color:#121212;font-size:clamp(27px,7vw,38px);letter-spacing:.16em;text-shadow:none}.hero-brand-rule{background:#6B6F4E;box-shadow:none}}
 @media(max-width:360px){.hero-brandname{font-size:25px;letter-spacing:.13em;gap:9px}.hero-brand-rule{width:26px}}
 
+/* Hero headline uses the client brand name */
+.hero h1.hero-brand-title{font-size:clamp(66px,10vw,132px);letter-spacing:-.075em;line-height:.82;overflow-wrap:normal}
+@media(max-width:800px){.hero h1.hero-brand-title{font-size:clamp(72px,17vw,116px)}}
+@media(max-width:360px){.hero h1.hero-brand-title{font-size:clamp(62px,17vw,76px)}}
 </style>
 </head>
 <body>
@@ -346,7 +350,7 @@ button, a, input, select, textarea { touch-action:manipulation; }
 <main id="top">
 <section class="wrap hero"><video class="hero-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260803_192301_9231ed6b-c55c-4a48-909c-4ebe11cf2e11.mp4" type="video/mp4"></video>
 <div class="copy"><div class="hero-brandname" aria-label="BREAKPOINT brand">BREAKPOINT<span class="hero-brand-rule"></span></div><div class="eyebrow"><span class="dot"></span> YOUR NEXT GAME STARTS HERE</div>
-<h1>OWN THE<br><span class="outline">TABLE.</span></h1>
+<h1 class="hero-brand-title">BREAK<br><span class="outline">POINT.</span></h1>
 <p>Good games. Great company. Your table, your time. Choose a session and reserve your spot in just a few steps.</p>
 <div class="herobtns"><a class="btn" href="#booking">RESERVE A TABLE <span>↗</span></a><a class="btn secondary" href="#board">EXPLORE THE TABLE ↓</a></div>
 <div class="tiny">ONE TABLE. YOUR CREW. A GAME WORTH PLAYING.</div></div>
