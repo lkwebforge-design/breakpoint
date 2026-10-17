@@ -333,6 +333,11 @@ button, a, input, select, textarea { touch-action:manipulation; }
 .hero-brandname{display:flex;align-items:center;gap:13px;margin:0 0 23px;font-size:clamp(28px,3.5vw,43px);font-weight:700;letter-spacing:.19em;line-height:1;color:var(--bone);text-transform:uppercase;text-shadow:0 3px 24px #0005}
 .hero-brand-rule{display:inline-block;width:42px;height:2px;background:var(--olive);box-shadow:0 0 14px #6B6F4E88}
 .hero .copy .eyebrow{margin-bottom:0}
+/* Improve readability of the hero copy over the video */
+.hero .copy .eyebrow,.hero .copy p,.hero .copy .tiny{color:#F4F0E5;text-shadow:0 2px 12px rgba(0,0,0,.78)}
+.hero .copy .eyebrow .dot{background:#C7A66A;box-shadow:0 0 14px #C7A66A88}
+@media(max-width:800px){.hero .copy .eyebrow,.hero .copy p,.hero .copy .tiny{color:#F4F0E5;text-shadow:0 2px 10px rgba(0,0,0,.9)}.hero .copy .eyebrow .dot{background:#C7A66A;box-shadow:0 0 12px #C7A66A88}}
+
 @media(max-width:800px){.hero-brandname{color:#121212;font-size:clamp(27px,7vw,38px);letter-spacing:.16em;text-shadow:none}.hero-brand-rule{background:#6B6F4E;box-shadow:none}}
 @media(max-width:360px){.hero-brandname{font-size:25px;letter-spacing:.13em;gap:9px}.hero-brand-rule{width:26px}}
 
