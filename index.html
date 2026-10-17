@@ -388,6 +388,11 @@ button, a, input, select, textarea { touch-action:manipulation; }
 .hero:before{z-index:-2;background:linear-gradient(90deg,rgba(18,18,18,.88) 0%,rgba(18,18,18,.70) 49%,rgba(18,18,18,.50) 100%),linear-gradient(0deg,rgba(18,18,18,.76),rgba(18,18,18,.22) 65%)}
 @media(max-width:800px){.hero-logo-background{width:min(105vw,620px);height:min(105vw,620px);left:56%;top:48%;opacity:.17}.hero:before{background:linear-gradient(90deg,rgba(18,18,18,.82),rgba(18,18,18,.55)),linear-gradient(0deg,rgba(18,18,18,.76),rgba(18,18,18,.2) 65%)}}
 
+
+/* Use real club photography for the Board 01 card instead of the CSS pool-table illustration */
+.boardvisual{overflow:hidden;padding:0;background:var(--pool-green-deep)}
+.board-photo{display:block;width:100%;height:100%;min-height:310px;object-fit:cover;object-position:center;border-radius:0;filter:saturate(.92) contrast(1.04)}
+@media(max-width:800px){.board-photo{min-height:270px}}
 </style>
 </head>
 <body>
@@ -444,7 +449,7 @@ button, a, input, select, textarea { touch-action:manipulation; }
 <div class="marquee"><span>PLAY WITH PURPOSE</span><b>✳</b><span>GOOD VIBES ONLY</span><b>✳</b><span>YOUR TABLE AWAITS</span><b>✳</b><span>PLAY WITH PURPOSE</span></div>
 <section class="wrap section" id="board">
 <div class="sectionhead"><div><div class="eyebrow">01 / PICK YOUR PLAYING FIELD</div><h2>ONE TABLE.<br>ENDLESS REMATCHES.</h2></div><p>Meet Board 01. Check your preferred time, choose your session length and lock in your game.</p></div>
-<div class="boardcard"><div class="boardvisual"><div class="table"><div class="felt"><i class="pocket p1"></i><i class="pocket p2"></i><i class="pocket p3"></i><i class="pocket p4"></i><i class="pocket p5"></i><i class="pocket p6"></i><i class="ball white"></i><i class="ball yellow"></i><i class="ball pink"></i><i class="ball blue"></i><i class="ball cyan"></i></div></div></div>
+<div class="boardcard"><div class="boardvisual"><img class="board-photo" src="./IMG_2464.jpeg" alt="Real pool table at Breakpoint Billiards Club" loading="lazy" decoding="async"></div>
 <div class="boardinfo"><span class="status">REQUESTS OPEN</span><h3>Billiard<br>Board 01</h3><p>Your spot for a focused match, a friendly rivalry or a full-on rematch night. Pick a date and see the available session times below.</p><div class="featurelist"><span>Flexible sessions</span><span>Pay at venue</span><span>Quick booking</span></div><a class="btn" href="#booking">CHECK TIMES ↘</a></div></div>
 </section>
 <section class="section" id="booking" style="background:linear-gradient(180deg,transparent,#10121b 35%,#10121b 75%,transparent)">
