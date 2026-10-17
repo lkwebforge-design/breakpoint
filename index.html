@@ -404,29 +404,13 @@ button, a, input, select, textarea { touch-action:manipulation; }
 @media(max-width:800px){.hero-pool-photo-scene{min-height:300px;border-radius:18px}.hero-pool-photo-scene .tabletag{top:12px;right:12px}.hero-pool-photo-scene .floating{left:12px;bottom:12px}}
 @media(max-width:480px){.hero-pool-photo-scene{min-height:245px}}
 
-/* Premium animated billiards artwork for the YOUR SESSION card */
-.summark.pool-session-art{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:1.5;background:radial-gradient(ellipse at 50% 42%,#214b3b 0%,#112d24 47%,#0b1713 100%);border:1px solid rgba(199,166,106,.25);box-shadow:inset 0 0 45px #0008;margin:20px 0}
-.pool-light{position:absolute;width:70%;height:70%;left:15%;top:-24%;border-radius:50%;background:#c7a66a20;filter:blur(26px);animation:poolLightPulse 5s ease-in-out infinite alternate}
-.summark.pool-session-art .mini-table{position:absolute;left:11%;top:23%;width:78%;height:52%;aspect-ratio:auto;border:7px solid #594633;border-radius:9px;background:linear-gradient(135deg,#28624b,#164431 58%,#0d3025);box-shadow:0 7px 0 #30261e,0 18px 28px #0008,inset 0 0 0 2px #c7a66a55;transform:perspective(500px) rotateX(8deg) rotateZ(-3deg);overflow:hidden}
-.summark.pool-session-art .mini-table:before{content:"";position:absolute;inset:5px;border:1px solid #d4c09a55;border-radius:3px;pointer-events:none}
-.mini-pocket{position:absolute;width:12px;height:12px;border-radius:50%;background:#090b09;border:1px solid #8b6d4a;z-index:2;box-shadow:inset 0 1px 3px #000}
-.pocket-a{left:-3px;top:-3px}.pocket-b{right:-3px;top:-3px}.pocket-c{left:-3px;bottom:-3px}.pocket-d{right:-3px;bottom:-3px}.pocket-e{left:50%;top:-5px;transform:translateX(-50%)}.pocket-f{left:50%;bottom:-5px;transform:translateX(-50%)}
-.mini-rail-line{position:absolute;inset:12px;border:1px solid #e3d0a055;border-radius:2px}
-.mini-ball{position:absolute;width:clamp(9px,2.2vw,14px);height:clamp(9px,2.2vw,14px);border-radius:50%;z-index:3;box-shadow:inset -2px -2px 3px #0007,inset 2px 2px 3px #fff8,0 2px 4px #0008}
-.mini-white{background:radial-gradient(circle at 32% 28%,#fff,#e7e0ce 65%,#9c978a);left:22%;top:53%;animation:miniWhiteRoll 4.8s cubic-bezier(.45,.02,.55,.98) infinite}
-.mini-gold{background:radial-gradient(circle at 32% 28%,#f6d98a,#b88b35 72%,#6e4b18);left:51%;top:30%;animation:miniGoldRoll 4.8s ease-in-out infinite}
-.mini-red{background:radial-gradient(circle at 32% 28%,#f18d84,#b83730 70%,#6c1818);left:66%;top:58%;animation:miniRedRoll 4.8s ease-in-out infinite}
-.mini-blue{background:radial-gradient(circle at 32% 28%,#91c8f2,#2865a2 70%,#15345b);left:42%;top:66%;animation:miniBlueRoll 4.8s ease-in-out infinite}
-.mini-cue{position:absolute;width:45%;height:3px;left:18%;top:64%;border-radius:3px;background:linear-gradient(90deg,#8b5e3c,#e3c49a,#8b5e3c);transform:rotate(-26deg);transform-origin:left center;opacity:.85;animation:cueStrike 4.8s ease-in-out infinite;z-index:4}
-.pool-art-label{position:absolute;left:14px;right:14px;bottom:12px;display:flex;align-items:center;gap:8px;color:#e9dfc9;font-size:8px;letter-spacing:.2em;font-weight:700}
+/* Real looping billiards footage for the YOUR SESSION card */
+.summark.pool-session-video{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:1.5;background:#0b1713 url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=900") center/cover no-repeat;border:1px solid rgba(199,166,106,.25);box-shadow:inset 0 0 45px #0008;margin:20px 0}
+.pool-session-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.session-video-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,15,11,.02) 25%,rgba(4,15,11,.62) 100%),linear-gradient(90deg,rgba(4,15,11,.12),transparent 70%);pointer-events:none}
+.pool-art-label{position:absolute;left:14px;right:14px;bottom:12px;display:flex;align-items:center;gap:8px;color:#f4f0e5;font-size:8px;letter-spacing:.2em;font-weight:700;text-shadow:0 1px 8px #000}
 .pool-art-label i{display:inline-block;width:4px;height:4px;border-radius:50%;background:#c7a66a;box-shadow:0 0 8px #c7a66a88}
-@keyframes miniWhiteRoll{0%,12%{left:22%;top:53%}32%{left:35%;top:44%}43%{left:42%;top:38%}60%,100%{left:42%;top:38%}}
-@keyframes miniGoldRoll{0%,22%{left:51%;top:30%}40%{left:64%;top:22%}54%,100%{left:64%;top:22%}}
-@keyframes miniRedRoll{0%,30%{left:66%;top:58%}47%{left:78%;top:68%}63%,100%{left:78%;top:68%}}
-@keyframes miniBlueRoll{0%,35%{left:42%;top:66%}52%{left:28%;top:72%}68%,100%{left:28%;top:72%}}
-@keyframes cueStrike{0%,13%{transform:rotate(-26deg) translateX(0);opacity:.9}24%{transform:rotate(-26deg) translateX(12px);opacity:.25}32%,100%{transform:rotate(-26deg) translateX(0);opacity:0}}
-@keyframes poolLightPulse{from{opacity:.55;transform:scale(.92)}to{opacity:1;transform:scale(1.08)}}
-@media(prefers-reduced-motion:reduce){.pool-light,.mini-white,.mini-gold,.mini-red,.mini-blue,.mini-cue{animation:none}}
+@media(prefers-reduced-motion:reduce){.pool-session-video video{display:none}}}
 </style>
 </head>
 <body>
@@ -498,15 +482,11 @@ button, a, input, select, textarea { touch-action:manipulation; }
 <div class="field"><label for="phone">WhatsApp / phone *</label><input id="phone" autocomplete="tel" type="tel" placeholder="+94 7X XXX XXXX" required maxlength="24"></div>
 <div class="field full"><label for="notes">Anything we should know? (optional)</label><input id="notes" placeholder="Optional note" maxlength="240"></div>
 </div><button class="btn fullbtn" type="submit">SUBMIT BOOKING REQUEST ↗</button><p class="policy">Your request is submitted to the booking system and remains pending until the owner confirms it. No online payment is required. Please wait for confirmation before travelling.</p></form></div>
-<aside class="summarybox"><div class="eyebrow">YOUR SESSION</div><div class="summark pool-session-art" role="img" aria-label="Animated illustration of a billiards table with moving pool balls">
-  <div class="pool-light"></div>
-  <div class="mini-table">
-    <span class="mini-pocket pocket-a"></span><span class="mini-pocket pocket-b"></span><span class="mini-pocket pocket-c"></span>
-    <span class="mini-pocket pocket-d"></span><span class="mini-pocket pocket-e"></span><span class="mini-pocket pocket-f"></span>
-    <span class="mini-rail-line"></span>
-    <span class="mini-ball mini-white"></span><span class="mini-ball mini-gold"></span><span class="mini-ball mini-red"></span><span class="mini-ball mini-blue"></span>
-    <span class="mini-cue"></span>
-  </div>
+<aside class="summarybox"><div class="eyebrow">YOUR SESSION</div><div class="summark pool-session-video">
+  <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=900" aria-label="Looping real video of a billiards game">
+    <source src="https://videos.pexels.com/video-files/6254169/6254169-hd_1920_1080_25fps.mp4" type="video/mp4">
+  </video>
+  <div class="session-video-shade"></div>
   <span class="pool-art-label">BREAKPOINT <i></i> BOARD 01</span>
 </div><h3>Board 01</h3><p class="sub">Your reservation at a glance.</p><div class="sumrow"><span>Date</span><strong id="sumDate">Choose a date</strong></div><div class="sumrow"><span>Start time</span><strong id="sumTime">Choose a slot</strong></div><div class="sumrow"><span>Duration</span><strong id="sumDuration">1 hour</strong></div><div class="sumrow"><span>Payment</span><strong>At the venue</strong></div><div class="sumrow"><span>Booking status</span><strong style="color:var(--lime)">Awaiting request</strong></div><p class="policy">Requests are saved in the booking system and checked for time conflicts. The owner must confirm each request. Live availability and automatic owner notifications are not enabled yet.</p></aside>
 </div></div></section>
