@@ -411,6 +411,12 @@ button, a, input, select, textarea { touch-action:manipulation; }
 .pool-art-label{position:absolute;left:14px;right:14px;bottom:12px;display:flex;align-items:center;gap:8px;color:#f4f0e5;font-size:8px;letter-spacing:.2em;font-weight:700;text-shadow:0 1px 8px #000}
 .pool-art-label i{display:inline-block;width:4px;height:4px;border-radius:50%;background:#c7a66a;box-shadow:0 0 8px #c7a66a88}
 @media(prefers-reduced-motion:reduce){.pool-session-video video{display:none}}}
+
+/* Fix clipped POINT. wordmark on narrow screens */
+.hero h1.hero-brand-title{width:100%;max-width:100%;font-size:clamp(64px,10vw,132px);letter-spacing:-.045em;line-height:.9;overflow:visible;word-break:normal}
+.hero h1.hero-brand-title .outline{display:inline-block;white-space:nowrap;padding-right:.06em;-webkit-text-stroke:1.5px var(--chalk,#F4F0E5);text-shadow:0 3px 24px #0008}
+@media(max-width:800px){.hero h1.hero-brand-title{font-size:clamp(60px,15.5vw,108px);letter-spacing:-.035em;line-height:.94}}
+@media(max-width:390px){.hero h1.hero-brand-title{font-size:clamp(52px,14.8vw,60px);letter-spacing:-.025em}.hero h1.hero-brand-title .outline{-webkit-text-stroke:1.3px var(--chalk,#F4F0E5)}}
 </style>
 </head>
 <body>
