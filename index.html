@@ -394,11 +394,11 @@ button, a, input, select, textarea { touch-action:manipulation; }
 .board-photo{display:block;width:100%;height:100%;min-height:310px;object-fit:cover;object-position:center;border-radius:0;filter:saturate(.92) contrast(1.04)}
 @media(max-width:800px){.board-photo{min-height:270px}}
 
-/* Replace the hero's illustrated table with professional billiards photography */
+/* Professional hero pool-room photo; preserve all existing sections and booking functionality */
 .hero-pool-photo-scene{min-height:390px;overflow:hidden;border:1px solid rgba(244,240,229,.2);border-radius:24px;background:#0A251F;box-shadow:0 28px 80px rgba(0,0,0,.32)}
-.hero-pool-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-1;filter:saturate(.88) contrast(1.06)}
-.hero-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,37,31,.08),rgba(10,37,31,.2) 45%,rgba(10,37,31,.62)),linear-gradient(90deg,rgba(10,37,31,.14),transparent 60%);pointer-events:none;z-index:0}
-.hero-pool-photo-scene .tabletag,.hero-pool-photo-scene .floating{z-index:1}
+.hero-pool-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;filter:saturate(.88) contrast(1.06)}
+.hero-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,37,31,.08),rgba(10,37,31,.2) 45%,rgba(10,37,31,.62)),linear-gradient(90deg,rgba(10,37,31,.14),transparent 60%);pointer-events:none;z-index:1}
+.hero-pool-photo-scene .tabletag,.hero-pool-photo-scene .floating{z-index:2}
 .hero-pool-photo-scene .tabletag{top:18px;right:18px}
 .hero-pool-photo-scene .floating{left:18px;bottom:18px}
 @media(max-width:800px){.hero-pool-photo-scene{min-height:300px;border-radius:18px}.hero-pool-photo-scene .tabletag{top:12px;right:12px}.hero-pool-photo-scene .floating{left:12px;bottom:12px}}
@@ -417,7 +417,65 @@ button, a, input, select, textarea { touch-action:manipulation; }
 <p>Good games. Great company. Your table, your time. Choose a session and reserve your spot in just a few steps.</p>
 <div class="herobtns"><a class="btn" href="#booking">RESERVE A TABLE <span>↗</span></a><a class="btn secondary" href="#board">EXPLORE THE TABLE ↓</a></div>
 <div class="tiny">ONE TABLE. YOUR CREW. A GAME WORTH PLAYING.</div></div>
-<div class="scene hero-pool-photo-scene" aria-label="Professional pool table in a billiards room"><img class="hero-pool-photo" src="https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=1800" alt="Professional billiards table in a stylish indoor game room" loading="eager" decoding="async"><div class="hero-photo-shade"></div><div class="tabletag">BOARD 01 / READY WHEN YOU ARE</div><div class="floating"><strong>YOUR GAME. YOUR CALL.</strong>Pick a time. Bring your best shot.</div></div></section>
+<div class="scene hero-pool-photo-scene" aria-label="Professional pool table in a billiards room"><img class="hero-pool-photo" src="https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaGdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=1800" alt="Professional billiards table in a stylish indoor game room" loading="eager" decoding="async"><div class="hero-photo-shade"></div><div class="tabletag">BOARD 01 / READY WHEN YOU ARE</div><div class="floating"><strong>YOUR GAME. YOUR CALL.</strong>Pick a time. Bring your best shot.</div></div>
+</section>
+
+<section class="club-showcase" id="club-slideshow" aria-label="Breakpoint photo and video gallery">
+  <div class="club-showcase-inner">
+    <div class="club-showcase-head">
+      <div><div class="eyebrow"><span class="dot"></span> INSIDE BREAKPOINT</div>
+      <h2>FEEL THE<br><span>GAME.</span></h2></div>
+      <p>Real moments. Real atmosphere. Take a look around before you choose your session.</p>
+    </div>
+    <div class="club-carousel" aria-roledescription="carousel" aria-label="Breakpoint club gallery">
+      <div class="club-slide-stage" id="clubSlideStage"></div>
+      <div class="club-carousel-bottom">
+        <div class="club-slide-caption"><span class="club-slide-kicker">BREAKPOINT / CLUB DIARY</span><strong id="clubSlideCaption">The Breakpoint atmosphere</strong></div>
+        <div class="club-carousel-controls">
+          <span class="club-slide-count"><b id="clubSlideCurrent">01</b> / <span id="clubSlideTotal">16</span></span>
+          <button type="button" class="club-arrow" id="clubPrev" aria-label="Previous slide">←</button>
+          <button type="button" class="club-arrow" id="clubNext" aria-label="Next slide">→</button>
+        </div>
+      </div>
+      <div class="club-progress" id="clubSlideDots" aria-label="Choose a slide"></div>
+    </div>
+  </div>
+</section>
+
+<section class="club-rules" id="club-rules" aria-labelledby="clubRulesTitle">
+  <div class="club-rules-inner">
+    <div class="club-rules-copy">
+      <div class="eyebrow"><span class="dot"></span> RESPECT THE GAME</div>
+      <h2 id="clubRulesTitle">OUR <span>RULES.</span></h2>
+      <p>A great session starts with respect. Take a moment to read the club rules before you play.</p>
+      <div class="club-rules-tag"><span>BREAKPOINT</span><i></i><span>PLAY FAIR · PLAY WELL</span></div>
+    </div>
+    <div class="club-rules-art">
+      <img src="./05047945-78a2-4e0f-9685-c09d3309b3e7.jpeg" alt="Breakpoint billiard club rules" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><span>PLAY WITH PURPOSE</span><b>✳</b><span>GOOD VIBES ONLY</span><b>✳</b><span>YOUR TABLE AWAITS</span><b>✳</b><span>PLAY WITH PURPOSE</span></div>
+<section class="wrap section" id="board">
+<div class="sectionhead"><div><div class="eyebrow">01 / PICK YOUR PLAYING FIELD</div><h2>ONE TABLE.<br>ENDLESS REMATCHES.</h2></div><p>Meet Board 01. Check your preferred time, choose your session length and lock in your game.</p></div>
+<div class="boardcard"><div class="boardvisual"><img class="board-photo" src="./IMG_2464.jpeg" alt="Real pool table at Breakpoint Billiards Club" loading="lazy" decoding="async"></div>
+<div class="boardinfo"><span class="status">REQUESTS OPEN</span><h3>Billiard<br>Board 01</h3><p>Your spot for a focused match, a friendly rivalry or a full-on rematch night. Pick a date and see the available session times below.</p><div class="featurelist"><span>Flexible sessions</span><span>Pay at venue</span><span>Quick booking</span></div><a class="btn" href="#booking">CHECK TIMES ↘</a></div></div>
+</section>
+<section class="section" id="booking" style="background:linear-gradient(180deg,transparent,#10121b 35%,#10121b 75%,transparent)">
+<div class="wrap"><div class="sectionhead"><div><div class="eyebrow">02 / MAKE IT YOURS</div><h2>BOOK YOUR<br>NEXT BREAK.</h2></div><p>Choose a day, time and session duration. The system checks for overlapping pending or confirmed bookings before saving. Your request stays pending until the owner confirms it. Start-time options are not a live availability calendar.</p></div>
+<div class="booklayout">
+<div class="bookingbox"><h3>Reserve Board 01</h3><p class="sub">Fill in your session details. Required fields are marked below.</p>
+<form id="bookingForm"><div class="formgrid">
+<div class="field"><label for="date">Booking date *</label><input type="date" id="date" required></div>
+<div class="field"><label for="duration">Session duration *</label><select id="duration" required><option value="1">1 hour</option><option value="2">2 hours</option><option value="3">3 hours</option></select></div>
+<div class="field full"><label>Available start times *</label><div class="slots" id="slots" role="group" aria-label="Available start times"></div><div class="fieldnote" id="slotNote">Select a date to view start-time options.</div><input type="hidden" id="time" required></div>
+<div class="field"><label for="name">Your name *</label><input id="name" autocomplete="name" placeholder="Name for the booking" required maxlength="80"></div>
+<div class="field"><label for="phone">WhatsApp / phone *</label><input id="phone" autocomplete="tel" type="tel" placeholder="+94 7X XXX XXXX" required maxlength="24"></div>
+<div class="field full"><label for="notes">Anything we should know? (optional)</label><input id="notes" placeholder="Optional note" maxlength="240"></div>
+</div><button class="btn fullbtn" type="submit">SUBMIT BOOKING REQUEST ↗</button><p class="policy">Your request is submitted to the booking system and remains pending until the owner confirms it. No online payment is required. Please wait for confirmation before travelling.</p></form></div>
+<aside class="summarybox"><div class="eyebrow">YOUR SESSION</div><div class="summark"><div class="mini-table"><i></i></div></div><h3>Board 01</h3><p class="sub">Your reservation at a glance.</p><div class="sumrow"><span>Date</span><strong id="sumDate">Choose a date</strong></div><div class="sumrow"><span>Start time</span><strong id="sumTime">Choose a slot</strong></div><div class="sumrow"><span>Duration</span><strong id="sumDuration">1 hour</strong></div><div class="sumrow"><span>Payment</span><strong>At the venue</strong></div><div class="sumrow"><span>Booking status</span><strong style="color:var(--lime)">Awaiting request</strong></div><p class="policy">Requests are saved in the booking system and checked for time conflicts. The owner must confirm each request. Live availability and automatic owner notifications are not enabled yet.</p></aside>
+</div></div></section>
 <section class="wrap section" id="how"><div class="sectionhead"><div><div class="eyebrow">03 / EASY AS THAT</div><h2>THREE STEPS.<br>THEN GAME ON.</h2></div><p>No back-and-forth needed. The goal is a simple, mobile-friendly booking experience.</p></div><div class="steps"><article class="step"><div class="stepnum">01 / CHOOSE</div><h3>Pick your session</h3><p>Select Board 01, a date, a start time and how long you want to play.</p></article><article class="step"><div class="stepnum">02 / RESERVE</div><h3>Share your details</h3><p>Enter your name and contact number. The system checks for time conflicts before saving your request.</p></article><article class="step"><div class="stepnum">03 / PLAY</div><h3>Show up and break</h3><p>Pay at the venue and enjoy the game. The owner must confirm your request before your session is booked.</p></article></div></section>
 <section class="wrap section faq"><div><div class="eyebrow">GOOD TO KNOW</div><h2>BEFORE YOU<br>TAKE THE SHOT.</h2><p class="sub">A few quick answers for your first visit.</p></div><div><details class="faqitem"><summary>Can I choose how long to play?</summary><p>Yes. The demo offers 1, 2 or 3 hours. The owner can define the allowed durations in the live booking system.</p></details><details class="faqitem"><summary>Do I pay online?</summary><p>No. This concept uses payment at the venue; online payments are not part of this first version.</p></details><details class="faqitem"><summary>Is this a live booking right now?</summary><p>The form submits a booking request to the booking system. Requests are checked against overlapping bookings, but the selected time is not confirmed until the owner approves it. The owner management dashboard and automatic notifications are still being set up.</p></details></div></section>
 </main>
