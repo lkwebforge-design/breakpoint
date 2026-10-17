@@ -61,7 +61,7 @@ $('loginForm').addEventListener('submit',async e=>{
   finally{button.disabled=false;button.textContent='SIGN IN SECURELY ↗'}
 });
 $('signOut').addEventListener('click',async()=>{await db.auth.signOut();bookings=[];showSignedOut()});
-db.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_IN'&&session?.user){setTimeout(()=>enterDashboard(session.user),0)}else if(event==='SIGNED_OUT'){showSignedOut()}});
+// Session restoration is handled by getSession() below; sign-in and sign-out handlers manage the visible state.
 async function loadBookings(){
   clearMessage('mainMessage');$('bookingList').innerHTML='<div class="empty"><span class="spinner"></span> Loading booking records…</div>';
   try{
