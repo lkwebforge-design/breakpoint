@@ -58,15 +58,15 @@ body{background:var(--graphite);color:var(--bone)}
 @media(max-width:800px){.hero:before{background:linear-gradient(180deg,#E6E0D6d9,#E6E0D6a6 42%,#1C2430e0 100%)}.hero .eyebrow,.hero h1{color:var(--graphite)}.hero .outline{-webkit-text-stroke-color:var(--graphite)}.hero p{color:#121212d1}.hero .tiny{color:#121212b8}.hero .btn.secondary{color:var(--bone);background:#1C2430ed;border-color:#E6E0D64d}.hero .floating{background:#1C2430ed;color:var(--bone);border-color:#E6E0D63d}.hero .floating strong{color:var(--bone)}.boardinfo{background:linear-gradient(150deg,#4B1E236b,#1C2430f5)}}
 
 
-/* === CLIENT PALETTE: Lemon Chiffon background / Botticelli foreground === */
+/* === REFINED PALETTE: Lemon Chiffon canvas, Botticelli surfaces, Coffee Bean typography === */
 :root {
   --lemon-chiffon: #FFF8CA;
   --coffee-bean: #2D120D;
   --rosewood: #6B0B0C;
   --botticelli: #CDE3E8;
   --page-background: var(--lemon-chiffon);
-  --foreground: var(--botticelli);
-  --ink: var(--coffee-bean);
+  --foreground: var(--coffee-bean);
+  --surface: var(--botticelli);
   --accent: var(--rosewood);
   --silver-pink: var(--lemon-chiffon);
   --raisin-black: var(--coffee-bean);
@@ -77,7 +77,7 @@ body{background:var(--graphite);color:var(--bone)}
   --mountain-heather: var(--lemon-chiffon);
   --decanting: var(--botticelli);
   --funkie-friday: var(--rosewood);
-  --moonscape: var(--botticelli);
+  --moonscape: var(--coffee-bean);
   --graphite: var(--coffee-bean);
   --bone: var(--lemon-chiffon);
   --merlot: var(--rosewood);
@@ -85,60 +85,60 @@ body{background:var(--graphite);color:var(--bone)}
   --tobacco: var(--botticelli);
   --midnight: var(--coffee-bean);
   --color-bg: var(--lemon-chiffon);
-  --color-text: var(--botticelli);
-  --color-muted: var(--coffee-bean);
+  --color-text: var(--coffee-bean);
+  --color-muted: #634E49;
 }
-/* Lemon Chiffon is the dominant page canvas; Botticelli is the foreground */
-html, body { background: var(--lemon-chiffon) !important; color: var(--botticelli) !important; }
+/* Professional hierarchy: warm canvas, cool panels, dark readable typography */
+html, body { background: var(--lemon-chiffon) !important; color: var(--coffee-bean) !important; }
 body {
-  background-image: radial-gradient(ellipse at 12% 6%, rgba(205,227,232,.88), transparent 38%), radial-gradient(ellipse at 86% 26%, rgba(220,179,154,.22), transparent 36%) !important;
+  background-image: radial-gradient(ellipse at 12% 6%, rgba(205,227,232,.72), transparent 38%), radial-gradient(ellipse at 86% 26%, rgba(220,179,154,.18), transparent 36%) !important;
 }
 header, .nav, nav, .navbar, .site-nav {
-  background: rgba(255,248,202,.94) !important;
-  border-color: rgba(45,18,13,.18) !important;
-  color: var(--botticelli) !important;
+  background: rgba(255,248,202,.96) !important;
+  border-color: rgba(45,18,13,.14) !important;
+  color: var(--coffee-bean) !important;
 }
 a { color: var(--rosewood); }
 button, .btn, .button, .cta, .primary-btn, .booking-submit, [type="submit"] {
   background: var(--rosewood) !important;
-  color: var(--botticelli) !important;
-  border: 1px solid rgba(45,18,13,.22) !important;
+  color: var(--lemon-chiffon) !important;
+  border: 1px solid rgba(45,18,13,.16) !important;
 }
 button:hover, .btn:hover, .button:hover, .cta:hover, .primary-btn:hover, .booking-submit:hover, [type="submit"]:hover {
-  background: var(--botticelli) !important;
-  color: var(--coffee-bean) !important;
+  background: var(--coffee-bean) !important;
+  color: var(--lemon-chiffon) !important;
 }
 .hero, .hero-section, #board, .board-section, #booking, .booking-section, .steps-section, .faq-section, footer, .site-footer {
-  color: var(--botticelli) !important;
+  color: var(--coffee-bean) !important;
 }
-.hero::before, .hero::after { background-color: rgba(255,248,202,.14); }
-h1, h2, h3, h4, .section-title, .eyebrow, .kicker { color: var(--botticelli) !important; }
-p, .muted, .subtitle, .section-copy, .description { color: var(--botticelli) !important; }
+.hero::before, .hero::after { background-color: rgba(255,248,202,.12); }
+h1, h2, h3, h4, .section-title, .eyebrow, .kicker { color: var(--coffee-bean) !important; }
+p, .muted, .subtitle, .section-copy, .description { color: #634E49 !important; }
 .card, .glass-card, .booking-card, .board-card, .step-card, .faq-item, .feature-card, .availability-card, .booking-summary {
-  background: rgba(205,227,232,.88) !important;
-  border-color: rgba(45,18,13,.16) !important;
-  color: var(--botticelli) !important;
-  box-shadow: 0 18px 45px rgba(45,18,13,.09);
+  background: linear-gradient(145deg, rgba(205,227,232,.96), rgba(205,227,232,.78)) !important;
+  border-color: rgba(45,18,13,.13) !important;
+  color: var(--coffee-bean) !important;
+  box-shadow: 0 18px 45px rgba(45,18,13,.08);
 }
 input, select, textarea {
-  background: rgba(255,248,202,.96) !important;
-  color: var(--botticelli) !important;
+  background: rgba(255,255,255,.52) !important;
+  color: var(--coffee-bean) !important;
   border-color: rgba(45,18,13,.25) !important;
 }
-input::placeholder, textarea::placeholder { color: rgba(45,18,13,.68) !important; }
-label, .field-label { color: var(--botticelli) !important; }
+input::placeholder, textarea::placeholder { color: #725D58 !important; }
+label, .field-label { color: var(--coffee-bean) !important; }
 .badge, .pill, .status, .tag {
-  background: rgba(205,227,232,.92) !important;
-  color: var(--botticelli) !important;
-  border-color: rgba(45,18,13,.18) !important;
+  background: rgba(205,227,232,.9) !important;
+  color: var(--coffee-bean) !important;
+  border-color: rgba(45,18,13,.16) !important;
 }
-.marquee, .ticker, .announcement-bar { background: var(--botticelli) !important; color: var(--botticelli) !important; }
-table th { background: var(--botticelli) !important; color: var(--botticelli) !important; }
-table td { border-color: rgba(45,18,13,.18) !important; color: var(--botticelli) !important; }
-hr, .divider { border-color: rgba(45,18,13,.2) !important; }
+.marquee, .ticker, .announcement-bar { background: var(--rosewood) !important; color: var(--lemon-chiffon) !important; }
+table th { background: var(--botticelli) !important; color: var(--coffee-bean) !important; }
+table td { border-color: rgba(45,18,13,.15) !important; color: var(--coffee-bean) !important; }
+hr, .divider { border-color: rgba(45,18,13,.16) !important; }
 ::selection { background: var(--botticelli); color: var(--coffee-bean); }
 @media (max-width: 700px) {
-  .mobile-menu, .nav-menu, .menu-panel { background: var(--lemon-chiffon) !important; border-color: rgba(45,18,13,.2) !important; }
+  .mobile-menu, .nav-menu, .menu-panel { background: var(--lemon-chiffon) !important; border-color: rgba(45,18,13,.18) !important; color: var(--coffee-bean) !important; }
 }
 
 </style>
