@@ -14,7 +14,7 @@
 </head>
 <body>
 <header class="wrap nav">
-<a class="brand" href="#top" aria-label="Breakpoint home"><span class="logo">B</span><span>BREAKPOINT <span style="color:var(--lime)">/</span> BILLIARDS</span></a>
+<a class="brand" href="#top" aria-label="Breakpoint home"><span class="logo" aria-hidden="true"><svg viewBox="0 0 40 40" width="34" height="34" role="img" aria-label="BREAKPOINT 8-ball mark"><path d="M20 3 37 34H3Z" fill="none" stroke="#d6a94b" stroke-width="2.2"/><circle cx="20" cy="23" r="9.2" fill="#090a12" stroke="#f1f1f1" stroke-width="1.5"/><circle cx="20" cy="23" r="5.5" fill="#f1f1f1"/><text x="20" y="25.5" font-size="7" font-family="Arial,sans-serif" font-weight="700" text-anchor="middle" fill="#090a12">8</text></svg></span><span>BREAKPOINT <span style="color:var(--lime)">/</span> BILLIARDS</span></a>
 <nav class="navright"><a href="#board">THE TABLE</a><a href="#how">HOW IT WORKS</a><a class="navcta" href="#booking">BOOK A SESSION ↗</a></nav>
 </header>
 <main id="top">
@@ -63,6 +63,8 @@ function drawSlots(){slots.innerHTML='';timeInput.value='';const chosen=dateInpu
 function updateSummary(){$('sumDate').textContent=readableDate(dateInput.value);$('sumTime').textContent=readableTime(timeInput.value);$('sumDuration').textContent=durationInput.value+' '+(durationInput.value==='1'?'hour':'hours')}
 dateInput.addEventListener('change',drawSlots);durationInput.addEventListener('change',updateSummary);drawSlots();
 function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4500)}
+// Intended owner account for the private management dashboard (authentication still needs setup).
+const BREAKPOINT_OWNER_EMAIL='breakpointbilliardclub00@gmail.com';
 const SUPABASE_URL='https://hatoqeuhxlycphxbqpyc.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY='sb_publishable_cPRx8E4tAKxyrHwAScv0mQ_PpZMRznG';
 $('bookingForm').addEventListener('submit',async e=>{
