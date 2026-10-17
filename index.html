@@ -328,6 +328,14 @@ button, a, input, select, textarea { touch-action:manipulation; }
   .btn:hover, .navcta:hover, .step:hover { transform:none; }
 }
 
+
+/* BREAKPOINT hero wordmark */
+.hero-brandname{display:flex;align-items:center;gap:13px;margin:0 0 23px;font-size:clamp(28px,3.5vw,43px);font-weight:700;letter-spacing:.19em;line-height:1;color:var(--bone);text-transform:uppercase;text-shadow:0 3px 24px #0005}
+.hero-brand-rule{display:inline-block;width:42px;height:2px;background:var(--olive);box-shadow:0 0 14px #6B6F4E88}
+.hero .copy .eyebrow{margin-bottom:0}
+@media(max-width:800px){.hero-brandname{color:#121212;font-size:clamp(27px,7vw,38px);letter-spacing:.16em;text-shadow:none}.hero-brand-rule{background:#6B6F4E;box-shadow:none}}
+@media(max-width:360px){.hero-brandname{font-size:25px;letter-spacing:.13em;gap:9px}.hero-brand-rule{width:26px}}
+
 </style>
 </head>
 <body>
@@ -337,7 +345,7 @@ button, a, input, select, textarea { touch-action:manipulation; }
 </header>
 <main id="top">
 <section class="wrap hero"><video class="hero-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260803_192301_9231ed6b-c55c-4a48-909c-4ebe11cf2e11.mp4" type="video/mp4"></video>
-<div class="copy"><div class="eyebrow"><span class="dot"></span> YOUR NEXT GAME STARTS HERE</div>
+<div class="copy"><div class="hero-brandname" aria-label="BREAKPOINT brand">BREAKPOINT<span class="hero-brand-rule"></span></div><div class="eyebrow"><span class="dot"></span> YOUR NEXT GAME STARTS HERE</div>
 <h1>OWN THE<br><span class="outline">TABLE.</span></h1>
 <p>Good games. Great company. Your table, your time. Choose a session and reserve your spot in just a few steps.</p>
 <div class="herobtns"><a class="btn" href="#booking">RESERVE A TABLE <span>↗</span></a><a class="btn secondary" href="#board">EXPLORE THE TABLE ↓</a></div>
