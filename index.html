@@ -58,13 +58,16 @@ body{background:var(--graphite);color:var(--bone)}
 @media(max-width:800px){.hero:before{background:linear-gradient(180deg,#E6E0D6d9,#E6E0D6a6 42%,#1C2430e0 100%)}.hero .eyebrow,.hero h1{color:var(--graphite)}.hero .outline{-webkit-text-stroke-color:var(--graphite)}.hero p{color:#121212d1}.hero .tiny{color:#121212b8}.hero .btn.secondary{color:var(--bone);background:#1C2430ed;border-color:#E6E0D64d}.hero .floating{background:#1C2430ed;color:var(--bone);border-color:#E6E0D63d}.hero .floating strong{color:var(--bone)}.boardinfo{background:linear-gradient(150deg,#4B1E236b,#1C2430f5)}}
 
 
-/* === CLIENT PALETTE: Lemon Chiffon / Coffee Bean / Rosewood / Botticelli === */
+/* === CLIENT PALETTE: Lemon Chiffon background / Botticelli foreground === */
 :root {
   --lemon-chiffon: #FFF8CA;
   --coffee-bean: #2D120D;
-  /* Interpreted the mistyped Rosewood value #6BOBOC as #6B0B0C (O is not a valid hex digit). */
   --rosewood: #6B0B0C;
   --botticelli: #CDE3E8;
+  --page-background: var(--lemon-chiffon);
+  --foreground: var(--botticelli);
+  --ink: var(--coffee-bean);
+  --accent: var(--rosewood);
   --silver-pink: var(--lemon-chiffon);
   --raisin-black: var(--coffee-bean);
   --tuscan-red: var(--rosewood);
@@ -81,38 +84,61 @@ body{background:var(--graphite);color:var(--bone)}
   --olive: var(--botticelli);
   --tobacco: var(--botticelli);
   --midnight: var(--coffee-bean);
-  --color-bg: var(--coffee-bean);
-  --color-text: var(--lemon-chiffon);
-  --color-muted: var(--botticelli);
+  --color-bg: var(--lemon-chiffon);
+  --color-text: var(--botticelli);
+  --color-muted: var(--coffee-bean);
 }
-/* Apply the new palette consistently across the whole page */
-html, body { background: var(--coffee-bean) !important; color: var(--lemon-chiffon); }
-body { background-image: radial-gradient(ellipse at 15% 8%, rgba(205,227,232,.17), transparent 34%), radial-gradient(ellipse at 85% 30%, rgba(107,11,12,.34), transparent 38%); }
-header, .nav, nav, .navbar, .site-nav { background: rgba(45,18,13,.84) !important; border-color: rgba(205,227,232,.22) !important; }
-a { color: var(--botticelli); }
-button, .btn, .button, .cta, .primary-btn, .booking-submit, [type="submit"] { background: linear-gradient(135deg, var(--rosewood), #8D2826) !important; color: var(--lemon-chiffon) !important; border: 1px solid rgba(255,248,202,.38) !important; }
-button:hover, .btn:hover, .button:hover, .cta:hover, .primary-btn:hover, .booking-submit:hover, [type="submit"]:hover { background: var(--lemon-chiffon) !important; color: var(--coffee-bean) !important; }
-.hero, .hero-section, #board, .board-section, #booking, .booking-section, .steps-section, .faq-section, footer, .site-footer { color: var(--lemon-chiffon); }
-.hero::before, .hero::after { background-color: rgba(45,18,13,.5); }
-h1, h2, h3, h4, .section-title, .eyebrow, .kicker { color: var(--lemon-chiffon) !important; }
-p, .muted, .subtitle, .section-copy, .description { color: var(--botticelli); }
+/* Lemon Chiffon is the dominant page canvas; Botticelli is the foreground */
+html, body { background: var(--lemon-chiffon) !important; color: var(--botticelli) !important; }
+body {
+  background-image: radial-gradient(ellipse at 12% 6%, rgba(205,227,232,.88), transparent 38%), radial-gradient(ellipse at 86% 26%, rgba(220,179,154,.22), transparent 36%) !important;
+}
+header, .nav, nav, .navbar, .site-nav {
+  background: rgba(255,248,202,.94) !important;
+  border-color: rgba(45,18,13,.18) !important;
+  color: var(--botticelli) !important;
+}
+a { color: var(--rosewood); }
+button, .btn, .button, .cta, .primary-btn, .booking-submit, [type="submit"] {
+  background: var(--rosewood) !important;
+  color: var(--botticelli) !important;
+  border: 1px solid rgba(45,18,13,.22) !important;
+}
+button:hover, .btn:hover, .button:hover, .cta:hover, .primary-btn:hover, .booking-submit:hover, [type="submit"]:hover {
+  background: var(--botticelli) !important;
+  color: var(--coffee-bean) !important;
+}
+.hero, .hero-section, #board, .board-section, #booking, .booking-section, .steps-section, .faq-section, footer, .site-footer {
+  color: var(--botticelli) !important;
+}
+.hero::before, .hero::after { background-color: rgba(255,248,202,.14); }
+h1, h2, h3, h4, .section-title, .eyebrow, .kicker { color: var(--botticelli) !important; }
+p, .muted, .subtitle, .section-copy, .description { color: var(--botticelli) !important; }
 .card, .glass-card, .booking-card, .board-card, .step-card, .faq-item, .feature-card, .availability-card, .booking-summary {
-  background: linear-gradient(145deg, rgba(107,11,12,.72), rgba(45,18,13,.95)) !important;
-  border-color: rgba(205,227,232,.28) !important;
-  color: var(--lemon-chiffon);
-  box-shadow: 0 18px 55px rgba(0,0,0,.25);
+  background: rgba(205,227,232,.88) !important;
+  border-color: rgba(45,18,13,.16) !important;
+  color: var(--botticelli) !important;
+  box-shadow: 0 18px 45px rgba(45,18,13,.09);
 }
-input, select, textarea { background: rgba(45,18,13,.92) !important; color: var(--lemon-chiffon) !important; border-color: rgba(205,227,232,.42) !important; }
-input::placeholder, textarea::placeholder { color: var(--botticelli) !important; }
+input, select, textarea {
+  background: rgba(255,248,202,.96) !important;
+  color: var(--botticelli) !important;
+  border-color: rgba(45,18,13,.25) !important;
+}
+input::placeholder, textarea::placeholder { color: rgba(45,18,13,.68) !important; }
 label, .field-label { color: var(--botticelli) !important; }
-.badge, .pill, .status, .tag { background: rgba(205,227,232,.14) !important; color: var(--lemon-chiffon) !important; border-color: rgba(205,227,232,.35) !important; }
-.marquee, .ticker, .announcement-bar { background: var(--rosewood) !important; color: var(--lemon-chiffon) !important; }
-table th { background: var(--rosewood) !important; color: var(--lemon-chiffon) !important; }
-table td { border-color: rgba(205,227,232,.2) !important; }
-hr, .divider { border-color: rgba(205,227,232,.25) !important; }
+.badge, .pill, .status, .tag {
+  background: rgba(205,227,232,.92) !important;
+  color: var(--botticelli) !important;
+  border-color: rgba(45,18,13,.18) !important;
+}
+.marquee, .ticker, .announcement-bar { background: var(--botticelli) !important; color: var(--botticelli) !important; }
+table th { background: var(--botticelli) !important; color: var(--botticelli) !important; }
+table td { border-color: rgba(45,18,13,.18) !important; color: var(--botticelli) !important; }
+hr, .divider { border-color: rgba(45,18,13,.2) !important; }
 ::selection { background: var(--botticelli); color: var(--coffee-bean); }
 @media (max-width: 700px) {
-  .mobile-menu, .nav-menu, .menu-panel { background: var(--coffee-bean) !important; border-color: rgba(205,227,232,.28) !important; }
+  .mobile-menu, .nav-menu, .menu-panel { background: var(--lemon-chiffon) !important; border-color: rgba(45,18,13,.2) !important; }
 }
 
 </style>
