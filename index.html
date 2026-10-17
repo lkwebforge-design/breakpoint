@@ -58,56 +58,61 @@ body{background:var(--graphite);color:var(--bone)}
 @media(max-width:800px){.hero:before{background:linear-gradient(180deg,#E6E0D6d9,#E6E0D6a6 42%,#1C2430e0 100%)}.hero .eyebrow,.hero h1{color:var(--graphite)}.hero .outline{-webkit-text-stroke-color:var(--graphite)}.hero p{color:#121212d1}.hero .tiny{color:#121212b8}.hero .btn.secondary{color:var(--bone);background:#1C2430ed;border-color:#E6E0D64d}.hero .floating{background:#1C2430ed;color:var(--bone);border-color:#E6E0D63d}.hero .floating strong{color:var(--bone)}.boardinfo{background:linear-gradient(150deg,#4B1E236b,#1C2430f5)}}
 
 
-/* === CLIENT PALETTE: Silver Pink / Raisin Black / Tuscan Red / Tan / Rosy Brown === */
+/* === CLIENT PALETTE: Lemon Chiffon / Coffee Bean / Rosewood / Botticelli === */
 :root {
-  --silver-pink: #CEB2B7;
-  --raisin-black: #2F1B23;
-  --tuscan-red: #764A4D;
-  --tan: #DCB39A;
-  --rosy-brown: #C69390;
-  --back-in-black: var(--raisin-black);
-  --mountain-heather: var(--silver-pink);
-  --decanting: var(--tan);
-  --funkie-friday: var(--tuscan-red);
-  --moonscape: var(--rosy-brown);
-  --graphite: var(--raisin-black);
-  --bone: var(--silver-pink);
-  --merlot: var(--tuscan-red);
-  --olive: var(--rosy-brown);
-  --tobacco: var(--tan);
-  --midnight: var(--raisin-black);
-  --color-bg: var(--raisin-black);
-  --color-text: var(--silver-pink);
-  --color-muted: var(--rosy-brown);
+  --lemon-chiffon: #FFF8CA;
+  --coffee-bean: #2D120D;
+  /* Interpreted the mistyped Rosewood value #6BOBOC as #6B0B0C (O is not a valid hex digit). */
+  --rosewood: #6B0B0C;
+  --botticelli: #CDE3E8;
+  --silver-pink: var(--lemon-chiffon);
+  --raisin-black: var(--coffee-bean);
+  --tuscan-red: var(--rosewood);
+  --tan: var(--botticelli);
+  --rosy-brown: var(--botticelli);
+  --back-in-black: var(--coffee-bean);
+  --mountain-heather: var(--lemon-chiffon);
+  --decanting: var(--botticelli);
+  --funkie-friday: var(--rosewood);
+  --moonscape: var(--botticelli);
+  --graphite: var(--coffee-bean);
+  --bone: var(--lemon-chiffon);
+  --merlot: var(--rosewood);
+  --olive: var(--botticelli);
+  --tobacco: var(--botticelli);
+  --midnight: var(--coffee-bean);
+  --color-bg: var(--coffee-bean);
+  --color-text: var(--lemon-chiffon);
+  --color-muted: var(--botticelli);
 }
-/* Cohesive palette coverage across the entire site */
-html, body { background: var(--raisin-black) !important; color: var(--silver-pink); }
-body { background-image: radial-gradient(ellipse at 15% 8%, rgba(198,147,144,.2), transparent 34%), radial-gradient(ellipse at 85% 30%, rgba(118,74,77,.28), transparent 38%); }
-header, .nav, nav, .navbar, .site-nav { background: rgba(47,27,35,.82) !important; border-color: rgba(206,178,183,.22) !important; }
-a { color: var(--silver-pink); }
-button, .btn, .button, .cta, .primary-btn, .booking-submit, [type="submit"] { background: linear-gradient(135deg, var(--tuscan-red), var(--rosy-brown)) !important; color: var(--raisin-black) !important; border: 1px solid rgba(206,178,183,.38) !important; }
-button:hover, .btn:hover, .button:hover, .cta:hover, .primary-btn:hover, .booking-submit:hover, [type="submit"]:hover { background: var(--tan) !important; color: var(--raisin-black) !important; }
-.hero, .hero-section, #board, .board-section, #booking, .booking-section, .steps-section, .faq-section, footer, .site-footer { color: var(--silver-pink); }
-.hero::before, .hero::after { background-color: rgba(47,27,35,.48); }
-h1, h2, h3, h4, .section-title, .eyebrow, .kicker { color: var(--silver-pink) !important; }
-p, .muted, .subtitle, .section-copy, .description { color: var(--rosy-brown); }
+/* Apply the new palette consistently across the whole page */
+html, body { background: var(--coffee-bean) !important; color: var(--lemon-chiffon); }
+body { background-image: radial-gradient(ellipse at 15% 8%, rgba(205,227,232,.17), transparent 34%), radial-gradient(ellipse at 85% 30%, rgba(107,11,12,.34), transparent 38%); }
+header, .nav, nav, .navbar, .site-nav { background: rgba(45,18,13,.84) !important; border-color: rgba(205,227,232,.22) !important; }
+a { color: var(--botticelli); }
+button, .btn, .button, .cta, .primary-btn, .booking-submit, [type="submit"] { background: linear-gradient(135deg, var(--rosewood), #8D2826) !important; color: var(--lemon-chiffon) !important; border: 1px solid rgba(255,248,202,.38) !important; }
+button:hover, .btn:hover, .button:hover, .cta:hover, .primary-btn:hover, .booking-submit:hover, [type="submit"]:hover { background: var(--lemon-chiffon) !important; color: var(--coffee-bean) !important; }
+.hero, .hero-section, #board, .board-section, #booking, .booking-section, .steps-section, .faq-section, footer, .site-footer { color: var(--lemon-chiffon); }
+.hero::before, .hero::after { background-color: rgba(45,18,13,.5); }
+h1, h2, h3, h4, .section-title, .eyebrow, .kicker { color: var(--lemon-chiffon) !important; }
+p, .muted, .subtitle, .section-copy, .description { color: var(--botticelli); }
 .card, .glass-card, .booking-card, .board-card, .step-card, .faq-item, .feature-card, .availability-card, .booking-summary {
-  background: linear-gradient(145deg, rgba(118,74,77,.72), rgba(47,27,35,.94)) !important;
-  border-color: rgba(206,178,183,.28) !important;
-  color: var(--silver-pink);
-  box-shadow: 0 18px 55px rgba(0,0,0,.24);
+  background: linear-gradient(145deg, rgba(107,11,12,.72), rgba(45,18,13,.95)) !important;
+  border-color: rgba(205,227,232,.28) !important;
+  color: var(--lemon-chiffon);
+  box-shadow: 0 18px 55px rgba(0,0,0,.25);
 }
-input, select, textarea { background: rgba(47,27,35,.9) !important; color: var(--silver-pink) !important; border-color: rgba(206,178,183,.42) !important; }
-input::placeholder, textarea::placeholder { color: var(--rosy-brown) !important; }
-label, .field-label { color: var(--tan) !important; }
-.badge, .pill, .status, .tag { background: rgba(198,147,144,.18) !important; color: var(--silver-pink) !important; border-color: rgba(206,178,183,.35) !important; }
-.marquee, .ticker, .announcement-bar { background: var(--tuscan-red) !important; color: var(--silver-pink) !important; }
-table th { background: var(--tuscan-red) !important; color: var(--silver-pink) !important; }
-table td { border-color: rgba(206,178,183,.2) !important; }
-hr, .divider { border-color: rgba(206,178,183,.25) !important; }
-::selection { background: var(--tan); color: var(--raisin-black); }
+input, select, textarea { background: rgba(45,18,13,.92) !important; color: var(--lemon-chiffon) !important; border-color: rgba(205,227,232,.42) !important; }
+input::placeholder, textarea::placeholder { color: var(--botticelli) !important; }
+label, .field-label { color: var(--botticelli) !important; }
+.badge, .pill, .status, .tag { background: rgba(205,227,232,.14) !important; color: var(--lemon-chiffon) !important; border-color: rgba(205,227,232,.35) !important; }
+.marquee, .ticker, .announcement-bar { background: var(--rosewood) !important; color: var(--lemon-chiffon) !important; }
+table th { background: var(--rosewood) !important; color: var(--lemon-chiffon) !important; }
+table td { border-color: rgba(205,227,232,.2) !important; }
+hr, .divider { border-color: rgba(205,227,232,.25) !important; }
+::selection { background: var(--botticelli); color: var(--coffee-bean); }
 @media (max-width: 700px) {
-  .mobile-menu, .nav-menu, .menu-panel { background: var(--raisin-black) !important; border-color: rgba(206,178,183,.28) !important; }
+  .mobile-menu, .nav-menu, .menu-panel { background: var(--coffee-bean) !important; border-color: rgba(205,227,232,.28) !important; }
 }
 
 </style>
