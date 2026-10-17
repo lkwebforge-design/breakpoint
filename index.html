@@ -58,87 +58,105 @@ body{background:var(--graphite);color:var(--bone)}
 @media(max-width:800px){.hero:before{background:linear-gradient(180deg,#E6E0D6d9,#E6E0D6a6 42%,#1C2430e0 100%)}.hero .eyebrow,.hero h1{color:var(--graphite)}.hero .outline{-webkit-text-stroke-color:var(--graphite)}.hero p{color:#121212d1}.hero .tiny{color:#121212b8}.hero .btn.secondary{color:var(--bone);background:#1C2430ed;border-color:#E6E0D64d}.hero .floating{background:#1C2430ed;color:var(--bone);border-color:#E6E0D63d}.hero .floating strong{color:var(--bone)}.boardinfo{background:linear-gradient(150deg,#4B1E236b,#1C2430f5)}}
 
 
-/* === REFINED PALETTE: Lemon Chiffon canvas, Botticelli surfaces, Coffee Bean typography === */
+/* === BREAKPOINT ART DIRECTION: Championship Green / Chalk / Warm Brass === */
 :root {
-  --lemon-chiffon: #FFF8CA;
-  --coffee-bean: #2D120D;
-  --rosewood: #6B0B0C;
-  --botticelli: #CDE3E8;
-  --page-background: var(--lemon-chiffon);
-  --foreground: var(--coffee-bean);
-  --surface: var(--botticelli);
-  --accent: var(--rosewood);
-  --silver-pink: var(--lemon-chiffon);
-  --raisin-black: var(--coffee-bean);
-  --tuscan-red: var(--rosewood);
-  --tan: var(--botticelli);
-  --rosy-brown: var(--botticelli);
-  --back-in-black: var(--coffee-bean);
-  --mountain-heather: var(--lemon-chiffon);
-  --decanting: var(--botticelli);
-  --funkie-friday: var(--rosewood);
-  --moonscape: var(--coffee-bean);
-  --graphite: var(--coffee-bean);
-  --bone: var(--lemon-chiffon);
-  --merlot: var(--rosewood);
-  --olive: var(--botticelli);
-  --tobacco: var(--botticelli);
-  --midnight: var(--coffee-bean);
-  --color-bg: var(--lemon-chiffon);
-  --color-text: var(--coffee-bean);
-  --color-muted: #634E49;
+  --pool-green: #123D32;
+  --pool-green-deep: #0A251F;
+  --pool-green-light: #1D5948;
+  --chalk: #F4F0E5;
+  --warm-brass: #C7A66A;
+  --cue-wood: #8B5E3C;
+  --slate: #192622;
+  --page-background: var(--pool-green-deep);
+  --foreground: var(--chalk);
+  --surface: var(--slate);
+  --accent: var(--warm-brass);
+  --lemon-chiffon: var(--chalk);
+  --coffee-bean: var(--pool-green-deep);
+  --rosewood: var(--warm-brass);
+  --botticelli: var(--chalk);
+  --silver-pink: var(--chalk);
+  --raisin-black: var(--pool-green-deep);
+  --tuscan-red: var(--cue-wood);
+  --tan: var(--warm-brass);
+  --rosy-brown: var(--chalk);
+  --back-in-black: var(--pool-green-deep);
+  --mountain-heather: var(--chalk);
+  --decanting: var(--warm-brass);
+  --funkie-friday: var(--pool-green);
+  --moonscape: #B7C8BE;
+  --graphite: var(--pool-green-deep);
+  --bone: var(--chalk);
+  --merlot: var(--pool-green);
+  --olive: var(--pool-green-light);
+  --tobacco: var(--cue-wood);
+  --midnight: var(--pool-green-deep);
+  --color-bg: var(--pool-green-deep);
+  --color-text: var(--chalk);
+  --color-muted: #B7C8BE;
 }
-/* Professional hierarchy: warm canvas, cool panels, dark readable typography */
-html, body { background: var(--lemon-chiffon) !important; color: var(--coffee-bean) !important; }
+/* Rich billiards-club atmosphere: felt green, chalk-light typography, restrained brass */
+html, body {
+  background: var(--pool-green-deep) !important;
+  color: var(--chalk) !important;
+}
 body {
-  background-image: radial-gradient(ellipse at 12% 6%, rgba(205,227,232,.72), transparent 38%), radial-gradient(ellipse at 86% 26%, rgba(220,179,154,.18), transparent 36%) !important;
+  background-image:
+    radial-gradient(ellipse at 12% 5%, rgba(29,89,72,.48), transparent 38%),
+    radial-gradient(ellipse at 90% 35%, rgba(199,166,106,.09), transparent 32%) !important;
 }
 header, .nav, nav, .navbar, .site-nav {
-  background: rgba(255,248,202,.96) !important;
-  border-color: rgba(45,18,13,.14) !important;
-  color: var(--coffee-bean) !important;
+  background: rgba(10,37,31,.88) !important;
+  border-color: rgba(199,166,106,.2) !important;
+  color: var(--chalk) !important;
+  backdrop-filter: blur(18px);
 }
-a { color: var(--rosewood); }
+a { color: var(--warm-brass); }
 button, .btn, .button, .cta, .primary-btn, .booking-submit, [type="submit"] {
-  background: var(--rosewood) !important;
-  color: var(--lemon-chiffon) !important;
-  border: 1px solid rgba(45,18,13,.16) !important;
+  background: var(--warm-brass) !important;
+  color: var(--pool-green-deep) !important;
+  border: 1px solid rgba(244,240,229,.28) !important;
+  font-weight: 700;
 }
 button:hover, .btn:hover, .button:hover, .cta:hover, .primary-btn:hover, .booking-submit:hover, [type="submit"]:hover {
-  background: var(--coffee-bean) !important;
-  color: var(--lemon-chiffon) !important;
+  background: var(--chalk) !important;
+  color: var(--pool-green-deep) !important;
 }
 .hero, .hero-section, #board, .board-section, #booking, .booking-section, .steps-section, .faq-section, footer, .site-footer {
-  color: var(--coffee-bean) !important;
+  color: var(--chalk) !important;
 }
-.hero::before, .hero::after { background-color: rgba(255,248,202,.12); }
-h1, h2, h3, h4, .section-title, .eyebrow, .kicker { color: var(--coffee-bean) !important; }
-p, .muted, .subtitle, .section-copy, .description { color: #634E49 !important; }
+.hero::before, .hero::after { background-color: rgba(10,37,31,.22); }
+h1, h2, h3, h4, .section-title, .eyebrow, .kicker { color: var(--chalk) !important; }
+p, .muted, .subtitle, .section-copy, .description { color: #B7C8BE !important; }
 .card, .glass-card, .booking-card, .board-card, .step-card, .faq-item, .feature-card, .availability-card, .booking-summary {
-  background: linear-gradient(145deg, rgba(205,227,232,.96), rgba(205,227,232,.78)) !important;
-  border-color: rgba(45,18,13,.13) !important;
-  color: var(--coffee-bean) !important;
-  box-shadow: 0 18px 45px rgba(45,18,13,.08);
+  background: linear-gradient(145deg, rgba(29,89,72,.58), rgba(10,37,31,.94)) !important;
+  border-color: rgba(199,166,106,.22) !important;
+  color: var(--chalk) !important;
+  box-shadow: 0 18px 48px rgba(0,0,0,.22);
 }
 input, select, textarea {
-  background: rgba(255,255,255,.52) !important;
-  color: var(--coffee-bean) !important;
-  border-color: rgba(45,18,13,.25) !important;
+  background: rgba(10,37,31,.92) !important;
+  color: var(--chalk) !important;
+  border-color: rgba(199,166,106,.38) !important;
 }
-input::placeholder, textarea::placeholder { color: #725D58 !important; }
-label, .field-label { color: var(--coffee-bean) !important; }
+input::placeholder, textarea::placeholder { color: #B7C8BE !important; }
+label, .field-label { color: var(--warm-brass) !important; }
 .badge, .pill, .status, .tag {
-  background: rgba(205,227,232,.9) !important;
-  color: var(--coffee-bean) !important;
-  border-color: rgba(45,18,13,.16) !important;
+  background: rgba(199,166,106,.13) !important;
+  color: var(--chalk) !important;
+  border-color: rgba(199,166,106,.3) !important;
 }
-.marquee, .ticker, .announcement-bar { background: var(--rosewood) !important; color: var(--lemon-chiffon) !important; }
-table th { background: var(--botticelli) !important; color: var(--coffee-bean) !important; }
-table td { border-color: rgba(45,18,13,.15) !important; color: var(--coffee-bean) !important; }
-hr, .divider { border-color: rgba(45,18,13,.16) !important; }
-::selection { background: var(--botticelli); color: var(--coffee-bean); }
+.marquee, .ticker, .announcement-bar { background: var(--pool-green) !important; color: var(--chalk) !important; }
+table th { background: var(--pool-green) !important; color: var(--chalk) !important; }
+table td { border-color: rgba(199,166,106,.18) !important; color: var(--chalk) !important; }
+hr, .divider { border-color: rgba(199,166,106,.2) !important; }
+::selection { background: var(--warm-brass); color: var(--pool-green-deep); }
 @media (max-width: 700px) {
-  .mobile-menu, .nav-menu, .menu-panel { background: var(--lemon-chiffon) !important; border-color: rgba(45,18,13,.18) !important; color: var(--coffee-bean) !important; }
+  .mobile-menu, .nav-menu, .menu-panel {
+    background: var(--pool-green-deep) !important;
+    border-color: rgba(199,166,106,.22) !important;
+    color: var(--chalk) !important;
+  }
 }
 
 </style>
