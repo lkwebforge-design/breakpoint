@@ -460,6 +460,17 @@ button, a, input, select, textarea { touch-action:manipulation; }
  .hero-pool-photo-scene .floating{max-width:calc(100% - 24px);font-size:9px}
 }
 
+
+/* Align the hero's outer frame with the full-width first-screen layout.
+   Keep the background logo and its positioning unchanged. */
+.hero{width:100%;margin-left:0;margin-right:0}
+@media(max-width:800px){
+ .hero{width:100%;padding-left:18px;padding-right:18px}
+}
+@media(max-width:480px){
+ .hero{width:100%;padding-left:14px;padding-right:14px}
+}
+
 </style>
 </head>
 <body>
